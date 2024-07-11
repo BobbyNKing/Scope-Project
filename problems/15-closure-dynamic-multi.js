@@ -18,7 +18,12 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// Your code here 
+let dynamicMultiply = (num) => {
+  let innerMultiply = (num2) => {
+    return num * num2;
+  }
+  return innerMultiply;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

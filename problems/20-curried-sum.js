@@ -43,7 +43,25 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// Your code here 
+let curriedSum = (numArgs) => {
+  if (numArgs <= 0) {
+    return null;
+  }
+  let callCounter = 0;
+  let nums = [];
+
+  let func1 = (num) => {
+    callCounter++;
+    if (callCounter === numArgs) {
+      nums.push(num);
+      return nums.reduce((acc, n) => acc += n, 0);
+    } else {
+      nums.push(num);
+      return func1;
+    }
+  } 
+  return func1;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

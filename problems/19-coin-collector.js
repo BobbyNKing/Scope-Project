@@ -25,7 +25,20 @@ Example 3:
 
 ***********************************************************************/
 
-// Your code here 
+let coinCollector = (numCoins) => {
+    let coins = [];
+
+  let counter = (coinVar) => {
+    if (coins.length < numCoins) {
+      coins.push(coinVar);
+    }
+    if (coins.length === numCoins) {
+      return coins;
+    } 
+    return counter;
+  }
+  return counter;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
