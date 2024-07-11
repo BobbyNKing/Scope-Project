@@ -14,7 +14,9 @@ Examples:
 let arrowMyMap = (arr, cb) => {
   let newArr = [];
 
-  arr.forEach(());
+  arr.forEach((ele) => {
+    newArr.push(cb(ele));
+  });
 
   return newArr;
 }

@@ -10,8 +10,13 @@ arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
 
-// Your code here 
-
+let arrowMirrorArray = (array) => {
+  let newArray = [];
+  newArray = newArray.concat(array);
+  newArray = newArray.concat(array.reverse());
+  return newArray;
+}
+console.log(arrowMirrorArray(['a', 'b', 'c', 'd'])); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
