@@ -28,7 +28,29 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here 
+let countDownTimer = (n) => {
+  let remaining = n;
+
+  if (remaining === 0) {
+   return "Happy New Year!";
+    }
+    let inner = () => {
+      remaining--;
+
+        if (remaining === 0) {
+      
+          return "Happy New Year!";
+        }
+
+      return inner;
+}
+return inner;
+}
+
+
+
+let oneDay = countDownTimer(1);
+console.log(countDownTimer(oneDay)); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
