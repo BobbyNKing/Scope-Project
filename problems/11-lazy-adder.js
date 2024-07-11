@@ -22,7 +22,19 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// Your code here 
+let lazyAdder = (firstNum) => { // return lazyAdder2
+
+  let lazyAdder2 = (secondNum) => { // return lazyAdder3
+
+    let lazyAdder3 = (thirdNum) => { // return firstNum + secondNum + thirdNum
+      return firstNum + secondNum + thirdNum;
+    }
+
+    return lazyAdder3;
+  }
+
+  return lazyAdder2;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
